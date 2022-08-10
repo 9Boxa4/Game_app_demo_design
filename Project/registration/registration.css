@@ -1,0 +1,264 @@
+/* Zelena - #008e99
+
+Siva - #333333
+
+Bela - #f2f2f2 */
+
+html{
+    font-size: 62.5%;
+    font-family: 'Poppins', sans-serif;
+}
+
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-weight: 700;
+}
+
+h2{
+    font-size: 2.6rem;
+}
+
+p,span,label{
+    font-weight: 400;
+    font-size: 1.6rem;
+}
+
+
+.background-img{
+    position: static;
+    z-index: -1;
+    background-image: url('/Assets/background-desktop.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+    flex-grow: 1;
+}
+
+.main-content-container{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+    height: 100%;
+    width: 55%;
+    top: 0;
+    right: 0;
+    background-color:#f2f2f2d7 ;
+    padding: 0 3rem;
+}
+.company_logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+.registration_title-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #333333;
+}
+
+.title-box_title{
+    margin-bottom: 2rem;
+}
+
+.title-box_text {
+    margin-bottom: 2rem;
+    padding: 0 2rem;
+  }
+
+  .quiz{
+
+      align-self: center;
+      border:.8rem white solid ;
+      box-shadow: .2rem .6rem .8rem #747474;
+      margin-bottom: 4rem;
+  }
+
+.quiz_img{
+    height: 25rem;
+}
+
+.registration-button{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+    row-gap: 2rem;
+}
+
+.registration-inputs{
+    width: 85%;
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    grid-template-columns: repeat(3,1fr);
+    gap: 1.2rem;
+    margin: 0 6.4rem;
+    margin-bottom: 1.6rem;
+}
+
+.input-field{
+    height: 4.2rem;
+    border:.2rem #01adba solid;
+    padding: 0 1rem;
+    background-color: transparent;  
+}
+
+.input-field:focus{
+    outline: none !important;
+    box-shadow: 0 .4rem .4rem #01adba ;
+}
+
+::placeholder{
+    color:black
+}
+
+.registration-checkboxes{
+    position: relative;
+    z-index: 200;
+    margin: 0 6.4rem;
+    margin-bottom: 3.2rem;
+}
+
+
+input[type="checkbox"]{
+    position: relative;
+    accent-color: #008e99;
+
+}
+
+
+
+.register_btn{
+    padding: 1.4rem 2.4rem;
+    width: 24rem;
+    align-self: center;
+    background-color:#008e99;
+    color: #f2f2f2d7;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+.main-content-container .main-privacy-rights{
+    position: absolute;
+    bottom: 1rem;
+    right: 25%;
+}
+
+.privacy{
+    font-weight: 700;
+}
+
+.geometry {
+    position: absolute;
+    z-index: 50;
+    transform: translateX(-50%);
+    height: 80vh;
+    width: 30rem;
+    top: 20%;
+    left: 0%;
+    /* background-color: #4a9900; */
+  }
+  
+  .geometry_bar:nth-child(2){
+      z-index: 100;
+      height: 100%;
+      width:32rem;
+      background-color: #008e99;
+      clip-path: polygon(40% 0, 48% 5%, 48% 100%, 40% 100%);
+  }
+  .geometry_bar:nth-child(3){
+      z-index: 100;
+      transform: translate(8%,-100%);
+      height: 80%;
+      width:32rem;
+      background-color: #01adba;
+      clip-path: polygon(40% 0, 48% 5%, 48% 100%, 40% 100%);
+  }
+  
+  .geometry .geometry_bar:first-child{
+      position: absolute;
+      z-index: 100;
+      height: 40%;
+      width:32rem;
+      background-color: #01aebaed;
+      transform: translate(-8%,150%);
+      clip-path: polygon(42% 7%, 48% 0, 48% 100%, 41% 100%);
+  }
+
+
+
+  /* MID SIZE SOLUTION */
+  
+@media(max-width:1300px){
+    .main-content-container{
+        width: 85%;
+    }
+
+    .background-img{
+        background-image: url('/Assets/background-mob.jpg');
+    }
+
+
+    .register_btn{
+    width: 18rem;
+    }
+}
+
+/*MOBILE RESPONSIVE */
+
+@media(max-width:768px){
+
+    .main-content-container{
+        width: 90%;
+    }
+
+    .background-img{
+        background-image: url('/Assets/background-mob.jpg');
+    }
+
+    .company_logo{
+        margin-bottom: 2rem;
+    }
+
+    .register_btn{
+    width: 18rem;
+    }
+
+.registration-inputs{
+    grid-template-rows: repeat(6,1fr);
+    grid-template-columns: 1fr;
+   padding: 0 10rem;
+}
+
+.input-field{
+    text-align: center;
+}
+
+.quiz{
+    height: 20rem;
+    padding-bottom: .2rem ;
+}
+
+.quiz_img{
+    height: 100%;
+}
+
+.registration-checkboxes{
+    margin-bottom: 1.6rem;
+    text-align: center;
+}
+
+}

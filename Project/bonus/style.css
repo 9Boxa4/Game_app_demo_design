@@ -1,0 +1,192 @@
+/* Main color: #008e99 - green */
+/* Second color: #333333 - gray */
+/* Third color: #f2f2f2 - white */
+
+html{
+    font-size: 62.5%;
+}
+
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+p,span{
+    font-size: 1.6rem;
+    font-weight:400;
+
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-weight: 700;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Made a navbar menu ready to use if neccecary  */
+.header{
+    /* display: flex; */
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.6rem;
+    padding: 0 2rem;
+    background-color: #f2f2f2;
+    height: 8vh;
+    min-height: 5rem;
+    /* flex: 1; */
+}
+
+.logo-small{
+    display: none;
+}
+
+.nav-list{
+    display: flex;
+    gap: 2rem;
+    list-style: none; 
+    align-self: stretch;
+    transition: all 1s ease-in-out;
+}
+
+.nav-item{
+    display: flex;
+    flex: 1;
+    transition: all 5s;
+
+}
+
+.nav-list .nav-link:link,
+.nav-list .nav-link:visited
+{
+    text-decoration: none;
+    color: #000;
+    display: block;
+    text-transform: uppercase;
+    padding: 20px;
+
+}
+
+.nav-list .nav-link:hover,
+.nav-list .nav-link:active{
+    background-color: #e8e8e8;
+    border-radius: .5rem;
+    transform: scale(1.05);
+
+}
+.hamburger{
+    display: none;
+}
+
+
+
+.bar{
+    display: block;
+    background-color: #008e99;
+    width:2.5rem;
+    height: .3rem;
+    margin: .5rem auto;
+    transition: all 0.5s;
+}
+
+
+
+@media(max-width:768px){
+.logo{
+    display: none;
+}
+
+.logo-small{
+    display: block;
+}
+
+.nav-list{
+    display: none;
+     position: fixed; 
+    left: -100%;
+    top: -8rem; 
+}
+.hamburger{
+    display: block;
+
+}
+
+.hamburger.active .bar:nth-child(2){
+    display: none;
+    }
+
+.hamburger.active .bar:nth-child(1){
+        transform: translateY(.10rem) rotate(45deg);
+        
+        }
+
+.hamburger.active .bar:nth-child(3){
+            transform: translateY(-.8rem) rotate(-45deg);
+            }
+
+    .nav-list.active{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+                left: 0;
+                top:7rem;
+                width: 100%;
+                background-color: #f2f2f2;
+                height: 95vh;
+
+            }   
+}

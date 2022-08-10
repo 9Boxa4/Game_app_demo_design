@@ -1,0 +1,218 @@
+/* 
+
+green - #008e99
+
+gray - #333333
+
+white - #f2f2f2 
+
+*/
+
+html{
+    font-size: 62.5%;
+    font-family: 'Poppins', sans-serif;
+}
+
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-weight: 700;
+}
+
+h2{
+    font-size: 2.6rem;
+}
+
+p,span{
+    font-weight: 400;
+    font-size: 1.6rem;
+}
+
+
+.background-img{
+    position: static;
+    z-index: -1;
+    background-image: url('/Assets/background-desktop.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+    flex-grow: 1;
+}
+
+.main-content-container{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+    height: 100%;
+    width: 55%;
+    top: 0;
+    right: 0;
+    background-color:#f2f2f2d7 ;
+    padding: 0 1rem;
+}
+.company_logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 12rem;
+}
+.memory_title-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #333333;
+}
+
+.title-box_title{
+    margin-bottom: 8rem;
+}
+
+.memory-game{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(4,1fr);
+    width: 100%;
+    row-gap: 1.6rem;
+    column-gap: 1.6rem;
+    padding: 0 3rem;
+}
+
+.memory_img{
+   width: 100%;
+   border: .4rem  #008e99 solid;
+}
+
+
+.main-content-container .main-privacy-rights{
+    position: absolute;
+    bottom: 1rem;
+    right: 25%;
+}
+
+.privacy{
+    font-weight: 700;
+}
+
+.geometry {
+    position: absolute;
+    z-index: 50;
+    transform: translateX(-50%);
+    height: 80vh;
+    width: 30rem;
+    top: 20%;
+    left: 0%;
+  }
+  
+  .geometry_bar:nth-child(2){
+      z-index: 100;
+      height: 100%;
+      width:32rem;
+      background-color: #008e99;
+      clip-path: polygon(40% 0, 48% 5%, 48% 100%, 40% 100%);
+  }
+  .geometry_bar:nth-child(3){
+      z-index: 100;
+      transform: translate(8%,-100%);
+      height: 80%;
+      width:32rem;
+      background-color: #01adba;
+      clip-path: polygon(40% 0, 48% 5%, 48% 100%, 40% 100%);
+  }
+  
+  .geometry .geometry_bar:first-child{
+      position: absolute;
+      z-index: 100;
+      height: 40%;
+      width:32rem;
+      background-color: #01aebaed;
+      transform: translate(-8%,150%);
+      clip-path: polygon(42% 7%, 48% 0, 48% 100%, 41% 100%);
+  }
+
+
+  /*TABLET RESPONSIVE */
+
+
+  @media(max-width:1300px){
+    .main-content-container{
+        width: 85%;
+    }
+
+    .background-img{
+        background-image: url('/Assets/background-desktop.jpg');
+    }
+
+    .main-privacy-rights{
+        left: 50%;
+        transform: translateX(-50%);
+        transform: translateX(-40%);
+        width: 100%;
+    }
+
+    .title-box_title{
+        margin-bottom: 20px;
+    }
+
+    .memory-game{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        width: 65%;
+        row-gap: 1.6rem;
+        column-gap: 1.6rem;
+        transform: scale(0.8);
+        margin-top: -8rem;
+        align-self: center;
+        padding: 0 0 ;
+    }
+    
+    .company_logo{
+        margin-bottom: 2rem;
+    }
+}
+
+/* MOBILE RESPONSIVE */
+
+@media(max-width:768px){
+
+    .main-content-container{
+        width: 90%;
+    }
+
+    .background-img{
+        background-image: url('/Assets/background-mob.jpg');
+    }
+
+    .title-box_title{
+        margin-bottom: 8rem;
+    } 
+
+
+    .memory-game{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        width: 65%;
+        row-gap: 1.6rem;
+        column-gap: 1.6rem;
+        transform: translateX(25%);
+        margin-top: 0rem;
+        align-self: center;
+        align-self: auto;
+        padding: 0 0 ;
+    }
+
+    .main-privacy-rights{
+        left: 50%;
+        transform: translateX(-50%);
+        transform: translateX(-40%);
+        width: 100%;
+    }
+}
